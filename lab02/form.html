@@ -2,11 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Lab 02</title>                    
+        <title>Lab 02</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
     </head>
     <body>
         <form name="drinktype" action="#" method="get">
-            <h3>Drink Type:</h3>
+            <p>Drink Type:</p>
             <ol>
                     <input type="radio" name="dtype" value="americano">Americano<br>    
                     <input type="radio" name="dtype" value="cuppuccino">Cuppuccino<br>
@@ -14,9 +15,23 @@
                     <input type="radio" name="dtype" value="macchiato">Macchiato<br>
                     <input type="radio" name="dtype" value="mocha">Mocha
             </ol>
-      
-   
-   
+            <p>Size:</p>
+                <select name = "size">
+                    <option value="small"> Small</option>
+                    <option value="medium"> Medium</option>
+                    <option value="large"> Large</option>
+                </select>
+        
+            <p>Flavors and Extras: </p>
+                <ul> 
+                    <input type="checkbox">Extra Espresso Shot<br>
+                    <input type="checkbox">Caramel Shot<br>
+                    <input type="checkbox">Hazelnut Shot<br>
+                    <input type="checkbox">Vanilla Shot<br>
+                </ul>
+            <p>Order For (name):<input type="text" name = "order"></p><br/> <input class="order" type="button" value="Order!"> 
+        
+        </form>
     </body>
 </html>
       
