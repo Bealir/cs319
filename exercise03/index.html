@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Exercise03</title>
+        <title>Unit 3 Exercise</title>
         <meta charset="utf-8">
     </head>
-    <body> 
+    <body>
         <script>
             function addNumbers() {
                 var x;
@@ -19,7 +19,7 @@
                 answer = x + y;
                 alert(answer);
                 
-                document.getElementById("equation").innerHTML = x + " plus " + y " equals " + answer + "!";
+                document.getElementById("equation").innerHTML = x + " plus " + y + " equals " + answer + "!";
             }
             function subtractNumbers() {
                 var x;
@@ -34,7 +34,7 @@
                 answer = x - y;
                 alert(answer);
                 
-                document.getElementById("equation").innerHTML = x + " minus " + y " equals " + answer + "!";
+                document.getElementById("equation").innerHTML = x + " minus " + y + " equals " + answer + "!";
             }
             function multiplyNumbers() {
                 var x;
@@ -49,7 +49,7 @@
                 answer = x * y;
                 alert(answer);
                 
-                document.getElementById("equation").innerHTML = x + " times " + y " equals " + answer + "!";
+                document.getElementById("equation").innerHTML = x + " times " + y + " equals " + answer + "!";
             }
             function divideNumbers() {
                 var x;
@@ -64,15 +64,16 @@
                 answer = x / y;
                 alert(answer);
                 
-                document.getElementById("equation").innerHTML = x + " divided by " + y " equals " + answer + "!";
+                document.getElementById("equation").innerHTML = x + " divided by " + y + " equals " + answer + "!";
             }
-        </script> 
+        </script>
         <p id="equation"></p>
-        <form name="calc" method="get" action="#">
-            <button type="button" id = "add" name="addition" onclick = "addNumbers();">Add</button>
-            <button type="button" id = "subtract" name="subtraction" onclick = "subtractNumbers();">Subtract</button>
-            <button type="button" id = "multiply" name="multiple" onclick = "multiplyNumbers();">Multiply</button>
-            <button type="button" id = "divide" name="dividing" onclick = "divideNumbers();">Divide</button>
-        </form> 
+        <form name="calculator" action="#" method="get">
+            <p> <input type="button" id="add" name="add" value="Add" onclick="addNumbers();">
+                <input type="button" id="subtract" name="subtract" value="Subtract" onclick="subtractNumbers();">
+                <input type="button" id="multiply" name="multiply" value="Multiply" onclick="multiplyNumbers();">
+                <input type="button" id="divide" name="divide" value="Divide" onclick="divideNumbers();">
+            </p>
+        </form>
     </body>
 </html>
