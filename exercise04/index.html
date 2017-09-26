@@ -3,7 +3,6 @@
     <head>
         <title>Exercise 04 </title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css" type="text/css">
     </head>
     <body>
         <script>
@@ -12,6 +11,7 @@
                 var number;
                 var color;
                 var animal;
+                var result;
                 
                 
                 name = document.getElementById("text1").value;
@@ -19,8 +19,9 @@
                 color = document.example.color.value;
                 animal = document.example.animal.value;
                 
-                document.write("Hello, my name is " + name + "! I have " + number + " wonderful " + color + " " + animal + "!");
-                
+             
+                document.getElementById("words").innerHTML = "Hello, my name is " + name + "! I have " + number + " wonderful " + color + " " + animal + "!";
+                document.getElementById("text1").style.backgroundColor = "green";
             }
         </script>
         <form name="example" id="example" action="#" method="get">
@@ -46,6 +47,7 @@
             <p><input type="button" name="go" id = "go" value = "Tell Story!" onclick="check();">
             </p>
         </form>
-
+        <hr>
+        <p id="words"></p>
     </body>
 </html>
