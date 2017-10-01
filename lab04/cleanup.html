@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 04</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <script>
+            function cleanUp() {
+                
+                var fname;
+                var middle;
+                var lname;
+                var fullname;
+                
+                fname = document.getElementById("fname").value;
+                middle = document.getElementById("middle").value;
+                lname = document.getElementById("lname").value;
+                fullname = document.getElementById("fullname").value;
+                
+                fname = fname.trim();
+                fname = fname.toUpperCase();
+                
+                middle = middle.trim();
+                middle = middle.toUpperCase();
+                
+                lname = lname.trim();
+                lname = lname.toUpperCase();
+                        
+                
+                getElementById("fullname").value = fname;
+                
+            }
+        </script>
+        
+        <form name="biography" action="#" method="get">
+            <p>First Name:<br>
+            <input type="text" name="fname" id="fname"></p>
+            <p>Midddle Initial:<br>
+            <input type="text" name="middle" id="middle"></p>
+            <p>Last Name:<br>
+            <input type="text" name="lname" id="lname"></p>
+            <input type="button" name="cleanup" id="cleanup" value="Cleanup Name" onclick="cleanUp();">
+            <p>Full Name:<br>
+            <input type="text" name="fullname" id="fullname"></p>
+        </form>
+    </body>
+</html>
