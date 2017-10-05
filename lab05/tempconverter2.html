@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 05 Task 2</title>
+        <meta charset="utf-8">
+        <script>
+            function tempConvert() {
+                
+                //alert("working");
+                if (document.getElementById("ftoc").checked == true){
+                    
+                    var ftemp;
+                    var ctemp;
+
+                    ftemp = parseFloat(document.temp.ftemp.value);
+
+
+                    ctemp = ((ftemp - 32) * (5/9))
+
+                    document.temp.ctemp.value = ctemp
+
+                    document.getElementById("ctemp").style.backgroundColor = "LightGreen";
+                }
+                
+                else if (document.getElementById("ctof").checked == true){
+                    
+                    var ftemp;
+                    var ctemp;
+
+                    ctemp = parseFloat(document.temp.ctemp.value);
+
+                    ftemp = ((ctemp * (9/5)) + 32)
+
+                    document.temp.ftemp.value = ftemp
+
+                    document.getElementById("ftemp").style.backgroundColor = "LightGreen";
+                
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="temp" action="#" method="get">
+            <h2>Temp Converter 2.0</h2>
+            <p>Temperature in Fahrenheit:<br>
+            <input type="number" name="ftemp" id="ftemp"></p>
+            
+            
+            <p>
+            <input type="radio" name="temp" id="ftoc" value="F to C">F to C<br>
+            <input type="radio" name="temp" id="ctof" value="C to F">C to F
+            </p>
+            
+            <p>Temperature in Celsius:<br>
+            <input type="number" name="ctemp" id="ctemp"></p>
+            <input type="button" name="submit" id ="Submit" value = "Convert" onclick ="tempConvert();">
+        </form>
+    </body>
+</html>
