@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab05 Task 1</title>
+        <meta charset="utf-8">
+        <script>
+            function formValidate() {
+                
+                //alert("Form working");
+                var fname;
+                var lname;
+                var email;
+                
+                fname = document.getElementById("fname").value;
+                lname = document.getElementById("lname").value;
+                email = document.getElementById("email").value;
+                
+                fname = fname.trim();
+                lname = lname.trim();
+                email = email.trim();
+                
+                if (fname == "") {
+                    alert("Please provide first name");
+                    return false;
+                }else if (lname == "") {
+                    alert("Please provide last name");
+                    return false;
+                }else if (email == "") {
+                    alert("Please provide email address");
+                    return false;
+                }else{
+                    return true;
+                }
+
+                   }
+        </script>
+
+    </head>
+    <body>
+        <form name="email" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
+            <p>First Name:<br>
+            <input type="text" name="fname" id="fname"></p>
+            <p>Last Name:<br>
+            <input type="text" name="lname" id="lname"></p>
+            <p>Email Address:<br>
+            <input type="text" name="lname" id="email"></p>
+            <input type="submit" name="cleanup" id="cleanup" value="Submit">
+        </form>
+    </body>
+</html>
