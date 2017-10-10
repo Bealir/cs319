@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 06 </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function check(){
+                var numb;
+                var correct;
+                
+                
+                correct = "3";
+                numb = document.getElementById("numba").value;
+        
+                numb = numb.trim();
+                
+                
+                if (numb == "") {
+                    alert("Enter a Number!");
+                    numb.focus();
+                    return false;
+                } else if (isNaN(numb.value) == true) {
+                    alert("Your Number is invalid!");
+                    numb.select();
+                    return false;
+                }else if (numb.value < 1 || numb.value > 10) {
+                    alert("Your number is invalid!.");
+                    numb.select();
+                    return false;
+                } else if (numb.value < 3) {
+                    alert("Guess a Higher Number!.");
+                    numb.select();
+                    return false;
+                }else if (numb.value > 3) {
+                    alert("Guess a Lower Number!.");
+                    numb.select();
+                    return false;
+                } else if (numb.value == 3) {
+                    alert("You guessed the correct number!.");
+                    numb.select();
+                    return true;
+                }
+             
+            }
+        </script>
+        <form name="example" id="example" action="#" method="get" onsubmit="return check();">
+            <p>Guess a Number: <input type="text" name="numb" id = "numba">
+            </p>
+            <p><input type="submit" name="go" id = "go" value = "Submit">
+            </p>
+        </form>
+
+    </body>
+</html>
