@@ -15,31 +15,30 @@
                 numb = document.getElementById("numba").value;
         
                 numb = numb.trim();
-                
+
                 
                 if (numb == "") {
                     alert("Enter a Number!");
-                    numb.focus();
+                    document.example.numb.focus();
                     return false;
-                } else if (isNaN(numb.value) == true) {
-                    alert("Your Number is invalid!");
-                    numb.select();
+                }else if (isNaN(numb) == true) {
+                    alert ("Guess a number!");
+                    document.example.numb.select();
                     return false;
-                }else if (numb.value < 1 || numb.value > 10) {
+                }else if (numb < 1 || numb > 10) {
                     alert("Your number is invalid!.");
-                    numb.select();
+                    document.example.numb.select();
                     return false;
-                } else if (numb.value < 3) {
+                }else if (numb < 3) {
                     alert("Guess a Higher Number!.");
-                    numb.select();
+                    document.example.numb.select();
                     return false;
-                }else if (numb.value > 3) {
+                }else if (numb > 3) {
                     alert("Guess a Lower Number!.");
-                    numb.select();
+                    document.example.numb.select();
                     return false;
-                } else if (numb.value == 3) {
+                } else if (numb == 3) {
                     alert("You guessed the correct number!.");
-                    numb.select();
                     return true;
                 }
              
