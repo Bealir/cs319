@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab05 Task 1</title>
+        <meta charset="utf-8">
+        <script>
+            function formValidate() {
+                
+                //alert("Form working");
+                var fname;
+                var lname;
+                var email;
+                var age;
+                
+                fname = document.getElementById("fname").value;
+                lname = document.getElementById("lname").value;
+                email = document.getElementById("email").value;
+                age = document.getElementById("age").value;
+                
+                fname = fname.trim();
+                lname = lname.trim();
+                email = email.trim();
+                
+                if (fname == "") {
+                    alert("Please provide first name");
+                    return false;
+                }else if (lname == "") {
+                    alert("Please provide last name");
+                    return false;
+                }else if (email == "") {
+                    alert("Please provide email address");
+                    return false;
+                }else if (email.endsWith("@uwec.edu")== false) {
+                    alert("Please provide email address that ends with @uwec.edu");
+                    return false;
+                }else if (age == "") {
+                    alert("Enter you age!");
+                    document.email.age.focus();
+                    return false;
+                }else if (isNaN(age) == true) {
+                    alert ("Enter age as a number!");
+                    document.email.age.focus();
+                    return false;
+                }else if (age < 18) {
+                    alert ("Must be 18 or older!");
+                    document.email.age.focus();
+                    return false;
+                }else{
+                    return true;
+                }
+
+                   }
+        </script>
+
+    </head>
+    <body>
+        <form name="email" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
+            <p>First Name:<br>
+            <input type="text" name="fname" id="fname"></p>
+            <p>Last Name:<br>
+            <input type="text" name="lname" id="lname"></p>
+            <p>Email Address:<br>
+            <input type="text" name="lname" id="email"></p>
+            <p>Enter Age:<br>
+            <input type="text" name="age" id="age"></p>
+            <input type="submit" name="cleanup" id="cleanup" value="Submit">
+        </form>
+    </body>
+</html>

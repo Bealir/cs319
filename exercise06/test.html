@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 6</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script> 
+            function check() {
+                var correct;
+                var numb
+                
+                correct = 3;
+                numb = document.guess.numbguess.value;
+                numb = numb.trim();
+                
+                if (numb == "") {
+                    alert("Guess a number!");
+                    document.guess.numbguess.focus();
+                    return false;
+                } else if (isNaN(numb) == true) {
+                    alert ("Guess a number!");
+                    document.guess.numbguess.focus();
+                    return false;
+                } else if (numb > 10 || numb < 1) {
+                    alert ("Guess a number between 1 and 10!");
+                    document.guess.numbguess.focus();
+                    return false;
+                } else if (numb > 3 && numb <= 10) {
+                    alert ("Guess a lower number!");
+                    document.guess.numbguess.focus();
+                    return false;
+                } else if (numb < 3 && numb >= 1) {
+                    alert ("Guess a higher number!");
+                    document.guess.numbguess.focus();
+                    return false;
+                } else if (numb == 3) {
+                    alert ("Correct!");
+                    document.guess.numbguess.focus();
+                    return true;
+                }
+                    
+                }
+        </script>
+        
+        <form name="guess" id="guess" action="#" method="get" onsubmit = "return check();">
+        <p>Guess a Number! <input type="text" name="numbguess" id="guess"></p> 
+        <p><input type="submit" name="submit" id="submit" value="Guess!"></p>
+        
+        </form>
+    </body>
+</html>
