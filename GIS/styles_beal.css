@@ -13,3 +13,22 @@ body{
     padding: 1em;
     color: #fff; 
 }
+#main{
+    background-color: #fff;
+    padding: 1em;
+}
+#sidebar{
+    background-color: #D68051;
+    padding: 1em;
+    width: 13em;
+    float: right;
+}
+#footer{
+    background-color: #3B597D;
+    margin: 0;
+    color: #fff; 
+    clear: both;
+}
+div#footera{
+    color: #fff;
+}
