@@ -26,6 +26,7 @@ body{
 #footer{
     background-color: #3B597D;
     margin: 0;
+    padding: 1em;
     color: #fff; 
     clear: both;
 }
